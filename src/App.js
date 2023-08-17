@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Map from 'react-map-gl';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div>
+    <div id="create-div">
+      <button id="submit-button" type="button" >afwefawef</button>
+  </div>
+    <Map
+      mapLib={import('mapbox-gl')}
+      initialViewState={{
+        longitude: -100,
+        latitude: 40,
+        zoom: 3.5
+      }}
+      style={{width: "100vw", height: "100vh", overflow: "hidden"}}
+      mapStyle="mapbox://styles/mapbox/streets-v9"
+    />
+  </div>
   );
 }
 
